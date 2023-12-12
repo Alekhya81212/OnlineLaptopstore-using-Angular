@@ -1,0 +1,397 @@
+<h1>Available products</h1>
+
+<style>
+    .card-img-top {
+  width: 100%;
+  height: 200px; 
+  object-fit:contain;
+  align-items: center; 
+}
+.container{
+  background: linear-gradient(90deg, rgba(11,219,224,1) 0%, rgba(9,41,121,1) 35%, rgba(166,167,30,1) 100%);
+}
+
+</style>
+
+
+<div  id="container"   class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h3><strong>{{product.name}}</strong></h3>
+            <p class="card-text">{{product.description}} </p>
+            <p><strong>{{product.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+            
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product1.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h4><strong>{{product1.name}}</strong></h4>
+            <p class="card-text">{{product1.description}}  </p>
+            <p><strong>{{product1.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product1)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product2.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h4><strong>{{product2.name}}</strong></h4>
+            <p class="card-text">{{product2.description}} </p>
+            <p><strong>{{product2.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product2)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      </div>
+     
+    
+  
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{product3.image}}" class="card-img-top" alt="Image">
+            <div class="card-body">
+              <h3><strong>{{product3.name}}</strong></h3>
+              <p class="card-text"> {{product3.description}} </p>
+              <p><strong>{{product3.price|currency:'INR'}}</strong></p>
+              <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+    
+  
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product4.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h3><strong>{{product4.name}}</strong></h3>
+            <p class="card-text">{{product4.description}} </p>
+            <p><strong>{{product4.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product4)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h3><strong>{{product5.name}}</strong></h3> 
+            <p class="card-text">{{product5.description}}  </p>
+            <p><strong>{{product5.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product5)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+  <div class="container mt-5">
+    <div class="row">
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img src="{{product6.image}}" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h3><strong>{{product6.name}}</strong></h3> 
+        <p class="card-text">{{product6.description}}  </p>
+        <p><strong>{{product6.price|currency:'INR'}}</strong></p>
+        <button type="button" class="btn btn-primary" (click)="addTocart(product6)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img src="{{product7.image}}" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h3><strong>{{product7.name}} </strong></h3> 
+        <p >{{product7.description}}   </p>
+        <p><strong>{{product7.price|currency:'INR'}}</strong></p> 
+        <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+     
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img src="{{product8.image}}" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h3><strong>{{product8.name}}</strong></h3> 
+        <p class="card-text">{{product8.description}}  </p>
+        <p><strong>{{product8.price|currency:'INR'}}</strong></p>
+        <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+      </div>
+    </div>
+  </div>
+  </div>
+ 
+ <div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{{product9.image}}" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h3><strong>{{product9.name}}</strong></h3>
+          <p class="card-text"> {{product9.description}} </p>
+          <p><strong>{{product9.price|currency:'INR'}}</strong></p>
+          <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{{product10.image}}" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h3><strong>{{product10.name}} </strong></h3> 
+          <p >{{product10.description}}   </p>
+          <p><strong>{{product10.price|currency:'INR'}}</strong></p> 
+          <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+       
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{{product11.image}}" class="card-img-top" alt="Image">
+        <div class="card-body">
+          <h3><strong>{{product11.name}}</strong></h3> 
+          <p class="card-text">{{product11.description}}  </p>
+          <p><strong>{{product11.price|currency:'INR'}}</strong></p>
+          <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+        </div>
+      </div>
+    </div>
+    </div>
+ 
+   <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product12.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h3><strong>{{product12.name}}</strong></h3>
+            <p class="card-text"> {{product12.description}} </p>
+            <p><strong>{{product12.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product13.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h3><strong>{{product13.name}} </strong></h3> 
+            <p >{{product13.description}}   </p>
+            <p><strong>{{product13.price|currency:'INR'}}</strong></p> 
+            <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+         
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img src="{{product14.image}}" class="card-img-top" alt="Image">
+          <div class="card-body">
+            <h3><strong>{{product14.name}}</strong></h3> 
+            <p class="card-text">{{product14.description}}  </p>
+            <p><strong>{{product14.price|currency:'INR'}}</strong></p>
+            <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+      </div>
+     
+     <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{product15.image}}" class="card-img-top" alt="Image">
+            <div class="card-body">
+              <h3><strong>{{product15.name}}</strong></h3>
+              <p class="card-text"> {{product15.description}} </p>
+              <p><strong>{{product15.price|currency:'INR'}}</strong></p>
+              <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{product16.image}}" class="card-img-top" alt="Image">
+            <div class="card-body">
+              <h3><strong>{{product16.name}} </strong></h3> 
+              <p >{{product16.description}}   </p>
+              <p><strong>{{product16.price|currency:'INR'}}</strong></p> 
+              <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+           
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{product17.image}}" class="card-img-top" alt="Image">
+            <div class="card-body">
+              <h3><strong>{{product17.name}}</strong></h3> 
+              <p class="card-text">{{product17.description}}  </p>
+              <p><strong>{{product17.price|currency:'INR'}}</strong></p>
+              <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+            </div>
+          </div>
+        </div>
+        </div>
+       
+       <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="{{product18.image}}" class="card-img-top" alt="Image">
+              <div class="card-body">
+                <h3><strong>{{product18.name}}</strong></h3>
+                <p class="card-text"> {{product18.description}} </p>
+                <p><strong>{{product18.price|currency:'INR'}}</strong></p>
+                <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="{{product19.image}}" class="card-img-top" alt="Image">
+              <div class="card-body">
+                <h3><strong>{{product19.name}} </strong></h3> 
+                <p >{{product19.description}}   </p>
+                <p><strong>{{product19.price|currency:'INR'}}</strong></p> 
+                <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+             
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="{{product20.image}}" class="card-img-top" alt="Image">
+              <div class="card-body">
+                <h3><strong>{{product20.name}}</strong></h3> 
+                <p class="card-text">{{product20.description}}  </p>
+                <p><strong>{{product20.price|currency:'INR'}}</strong></p>
+                <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+              </div>
+            </div>
+          </div>
+          </div>
+         
+         <div class="container mt-5">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="{{product21.image}}" class="card-img-top" alt="Image">
+                <div class="card-body">
+                  <h3><strong>{{product21.name}}</strong></h3>
+                  <p class="card-text"> {{product21.description}} </p>
+                  <p><strong>{{product21.price|currency:'INR'}}</strong></p>
+                  <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="{{product22.image}}" class="card-img-top" alt="Image">
+                <div class="card-body">
+                  <h3><strong>{{product22.name}} </strong></h3> 
+                  <p >{{product22.description}}   </p>
+                  <p><strong>{{product22.price|currency:'INR'}}</strong></p> 
+                  <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+               
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="{{product23.image}}" class="card-img-top" alt="Image">
+                <div class="card-body">
+                  <h3><strong>{{product23.name}}</strong></h3> 
+                  <p class="card-text">{{product23.description}}  </p>
+                  <p><strong>{{product23.price|currency:'INR'}}</strong></p>
+                  <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            </div>
+          
+           <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="{{product24.image}}" class="card-img-top" alt="Image">
+                  <div class="card-body">
+                    <h3><strong>{{product24.name}}</strong></h3>
+                    <p class="card-text"> {{product24.description}} </p>
+                    <p><strong>{{product24.price|currency:'INR'}}</strong></p>
+                    <button type="button" class="btn btn-primary" (click)="addTocart(product3)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="{{product25.image}}" class="card-img-top" alt="Image">
+                  <div class="card-body">
+                    <h3><strong>{{product25.name}} </strong></h3> 
+                    <p >{{product25.description}}   </p>
+                    <p><strong>{{product25.price|currency:'INR'}}</strong></p> 
+                    <button type="button" class="btn btn-primary" (click)="addTocart(product7)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+                 
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                  <img src="{{product26.image}}" class="card-img-top" alt="Image">
+                  <div class="card-body">
+                    <h3><strong>{{product26.name}}</strong></h3> 
+                    <p class="card-text">{{product26.description}}  </p>
+                    <p><strong>{{product26.price|currency:'INR'}}</strong></p>
+                    <button type="button" class="btn btn-primary" (click)="addTocart(product8)">Add To Cart<i style="font:size 30px" class="fas fa-cart-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+          </div>
+          
+              
+            
+            
+            
+        
+            
+          
+          
+          
+      
+          
+        
+        
+        
+    
+        
+      
+      
+      
+  
+      
+    
+    
+    
+
+    
+  
+  
+  
