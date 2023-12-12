@@ -43,7 +43,7 @@ export class CartComponent implements OnInit {
        description:'RazorPay Demo',
        currency:'INR',
        amount:50000*100,
-       name:'Pranjali',
+       name:' Alekhya',
        key:'rzp_test_9GaJnMfGhdcs5s',
   
        prefills:{
