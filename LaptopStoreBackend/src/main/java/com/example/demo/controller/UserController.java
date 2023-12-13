@@ -5,24 +5,34 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.model.Signup;
 import com.example.demo.model.User;
-import com.example.demo.repo.UserRepository;
+import com.example.demo.service.SignupService;
 
 @RestController
-@CrossOrigin(origins="http://localhost:63115")//origins="*"
+@RequestMapping("/laptopstore")
+@CrossOrigin("*")//origins="*"
 public class UserController {
 
 	@Autowired
-	private UserRepository repo;
-	
-	@PostMapping("/user")
-	public ResponseEntity<User> registerUser(@RequestBody User user) {
+private SignupService signupService;
+    
+	@PostMapping("/signup")
+	public String signup(@RequestBody Signup signup) {
 		
-		System.out.println("data is stored in database");
-		return ResponseEntity.ok(repo.save(user));
+		return signupService.createNewuser(signup);
+		
 	}
+	@PostMapping("/login")
+	public String loginUser(@RequestBody Signup signup) {
+		
+		return signupService.loginUser(signup);
+		
+	}
+	
 	
 	
 }

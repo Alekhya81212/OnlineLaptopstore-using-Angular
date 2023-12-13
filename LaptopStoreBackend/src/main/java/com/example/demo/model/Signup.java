@@ -8,29 +8,37 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+@Entity
+@Table(name="SignupRegistration")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
-@Table(name="loginRegistration")
-
-public class User {
+public class Signup {
+	
 	@Id
 	@GeneratedValue
-	private int sno;
+	private int srno;
 	private String username;
+	private String email;
 	private String password;
-	public int getSno() {
-		return sno;
+	public int getSrno() {
+		return srno;
 	}
-	public void setSno(int sno) {
-		this.sno = sno;
+	public void setSrno(int srno) {
+		this.srno = srno;
 	}
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPassword() {
 		return password;
@@ -40,18 +48,21 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [sno=" + sno + ", username=" + username + ", password=" + password + "]";
+		return "Signup [srno=" + srno + ", username=" + username + ", email=" + email + ", password=" + password + "]";
 	}
-	public User(int sno, String username, String password) {
+	public Signup(int srno, String username, String email, String password) {
 		super();
-		this.sno = sno;
+		this.srno = srno;
 		this.username = username;
+		this.email = email;
 		this.password = password;
 	}
-	public User() {
+	public Signup() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 	
 	
 	
